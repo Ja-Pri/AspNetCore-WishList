@@ -1,0 +1,12 @@
+﻿
+@{
+}
+<h1>WishList</h1>
+<a asp-action="create">Add Item</a>
+<ul>
+    @foreach(Item i in Model)
+    {
+        <li>i.Description</li>
+        <a asp-action="delete" asp-route-id="@i.Id">Delete</a>
+    }
+</ul>
